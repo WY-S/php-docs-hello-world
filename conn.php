@@ -4,6 +4,7 @@ if (!$con) {
   die("mysqli_init failed");
 }
 echo "hello1";
+system "ls";
 mysqli_ssl_set($conn,NULL,NULL, "/home/site/wwwroot/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($con,"wenyimysql.mysql.database.azure.com","azureuser","SUNwenyi1234","school",3306,MYSQLI_CLIENT_SSL);
 if (mysqli_connect_errno($conn)) {
