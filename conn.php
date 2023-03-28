@@ -4,10 +4,9 @@ if (!$con) {
   die("mysqli_init failed");
 }
 echo "hello1";
-system "ls";
-mysqli_ssl_set($conn,NULL,NULL, "/home/site/wwwroot/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+mysqli_ssl_set($con,NULL,NULL, "/home/site/wwwroot/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($con,"wenyimysql.mysql.database.azure.com","azureuser","SUNwenyi1234","school",3306,MYSQLI_CLIENT_SSL);
-if (mysqli_connect_errno($conn)) {
+if (mysqli_connect_errno($con)) {
 die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 echo "hello2";
