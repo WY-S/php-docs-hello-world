@@ -11,9 +11,7 @@ $link = mysqli_real_connect ($db, 'wenyimysql.mysql.database.azure.com', 'azureu
 if (!$link)
 {
     die ('Connect error (' . mysqli_connect_errno() . '): ' . mysqli_connect_error() . "\n");
-} else {
-    $res = $db->query('SHOW TABLES;');
-    print_r ($res);
-    $db->close();
 }
+echo "hello";
+$db->close();
 ?>
