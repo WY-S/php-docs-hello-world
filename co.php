@@ -13,5 +13,19 @@ if (!$link)
     die ('Connect error (' . mysqli_connect_errno() . '): ' . mysqli_connect_error() . "\n");
 }
 echo "hello";
+
+// Run the create table query
+if (mysqli_query($db, '
+CREATE TABLE Products (
+`Id` INT NOT NULL AUTO_INCREMENT ,
+`ProductName` VARCHAR(200) NOT NULL ,
+`Color` VARCHAR(50) NOT NULL ,
+`Price` DOUBLE NOT NULL ,
+PRIMARY KEY (`Id`)
+);
+')) {
+printf("Table created\n");
+}
+
 $db->close();
 ?>
