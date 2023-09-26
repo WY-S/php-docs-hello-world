@@ -16,7 +16,7 @@ echo "hello";
 
 // Run the create table query
 if (mysqli_query($db, '
-CREATE TABLE Products (
+CREATE TABLE Products1 (
 `Id` INT NOT NULL AUTO_INCREMENT ,
 `ProductName` VARCHAR(200) NOT NULL ,
 `Color` VARCHAR(50) NOT NULL ,
