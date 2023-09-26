@@ -7,7 +7,7 @@ $db = mysqli_init();
 mysqli_options ($db, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, true);
 
 $db->ssl_set(NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
-$link = mysqli_real_connect ($db, 'wenyimysql8.mysql.database.azure.com', 'azureuser', 'SUNwenyi1234', 'school', 3306, NULL, MYSQLI_CLIENT_SSL);
+$link = mysqli_real_connect ($db, 'wenyimysql.mysql.database.azure.com', 'azureuser', 'SUNwenyi1234', 'school', 3306, NULL, MYSQLI_CLIENT_SSL);
 if (!$link)
 {
     die ('Connect error (' . mysqli_connect_errno() . '): ' . mysqli_connect_error() . "\n");
@@ -16,7 +16,7 @@ echo "hello";
 
 // Run the create table query
 if (mysqli_query($db, '
-CREATE TABLE Products1 (
+CREATE TABLE Products (
 `Id` INT NOT NULL AUTO_INCREMENT ,
 `ProductName` VARCHAR(200) NOT NULL ,
 `Color` VARCHAR(50) NOT NULL ,
