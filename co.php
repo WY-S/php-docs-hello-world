@@ -27,5 +27,11 @@ PRIMARY KEY (`Id`)
 printf("Table created\n");
 }
 
+if (mysqli_query($db, '
+select sleep(10);
+')) {
+printf("Sleep10\n");
+}
+
 $db->close();
 ?>
